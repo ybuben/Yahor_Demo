@@ -11,22 +11,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130215201739) do
+ActiveRecord::Schema.define(:version => 20130219011013) do
+
+  create_table "deliverers", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "email"
+    t.string   "pwdHash"
+    t.integer  "refID"
+    t.integer  "creditcard"
+    t.float    "rating"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "packages", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.integer  "tracking_number"
-    t.decimal  "weight"
+    t.text     "description"
+    t.integer  "weight"
+    t.integer  "length"
+    t.integer  "breadth"
+    t.integer  "height"
+    t.date     "maxDate"
+    t.time     "maxtTime"
+    t.string   "receiverName"
+    t.string   "receiverPhone"
+    t.string   "deliveryAddress"
+    t.integer  "shipper_id"
+    t.integer  "deliverer_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
 
-  create_table "users", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "netid"
-    t.integer  "age"
+  create_table "shippers", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "email"
+    t.string   "pwdHash"
+    t.integer  "creditcard"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

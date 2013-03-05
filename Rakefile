@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DemoForYahor::Application.load_tasks
+Shipme2::Application.load_tasks

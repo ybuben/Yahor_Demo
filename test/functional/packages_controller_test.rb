@@ -18,7 +18,7 @@ class PackagesControllerTest < ActionController::TestCase
 
   test "should create package" do
     assert_difference('Package.count') do
-      post :create, package: { description: @package.description, name: @package.name, tracking_number: @package.tracking_number, weight: @package.weight }
+      post :create, package: { breadth: @package.breadth, deliverer_id: @package.deliverer_id, deliveryAddress: @package.deliveryAddress, description: @package.description, height: @package.height, length: @package.length, maxDate: @package.maxDate, maxtTime: @package.maxtTime, receiverName: @package.receiverName, receiverPhone: @package.receiverPhone, shipper_id: @package.shipper_id, weight: @package.weight }
     end
 
     assert_redirected_to package_path(assigns(:package))
@@ -35,7 +35,7 @@ class PackagesControllerTest < ActionController::TestCase
   end
 
   test "should update package" do
-    put :update, id: @package, package: { description: @package.description, name: @package.name, tracking_number: @package.tracking_number, weight: @package.weight }
+    put :update, id: @package, package: { breadth: @package.breadth, deliverer_id: @package.deliverer_id, deliveryAddress: @package.deliveryAddress, description: @package.description, height: @package.height, length: @package.length, maxDate: @package.maxDate, maxtTime: @package.maxtTime, receiverName: @package.receiverName, receiverPhone: @package.receiverPhone, shipper_id: @package.shipper_id, weight: @package.weight }
     assert_redirected_to package_path(assigns(:package))
   end
 

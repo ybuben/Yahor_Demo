@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DemoForYahor</title>
+  <title>Shipme2</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div>
-<ul>
-  <li> <%= link_to "users", users_path  %> </li>
-  <li> <%= link_to "packages", packages_path  %> </li>
-</ul>
-</div>
 <%= yield %>
 
 </body>

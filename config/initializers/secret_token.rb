@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-DemoForYahor::Application.config.secret_token = '339c6a79d1c37850c057a0bd9a71b04d3f3c750d7953f504f46d6796623f646b5b1a7f4cdecd327bd2547b07ca6e098dec8c93da3c71570eb21a1e44967ad2d0'
+Shipme2::Application.config.secret_token = '0a3341b2b0f0a87b3ac5d13596921065c8e22e2f91046b92c8dc5371a02439f29607e031dee51e3f6fa020afcd1baaddef807bb4dd8fdc28b176ca370efb7346'
