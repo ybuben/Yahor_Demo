@@ -19,7 +19,7 @@
     <th></th>
   </tr>
 
-<% @packages.each do |package| %>
+<% packages_shippers do |package| %>
   <tr>
     <td><%= package.description %></td>
     <td><%= package.weight %></td>

@@ -1,8 +1,8 @@
 Shipme2::Application.routes.draw do
-  root :to => 'front_shipper#index'
+  root :to => 'frontshippers#index'
   
-get "front_shipper#index", as: :front_shipper
-
+get "frontshipper/index" => "frontshippers#index", as: :frontshippers
+  
   resources :deliverers
 
 

@@ -1,6 +1,8 @@
 class ShippersController < ApplicationController
   # GET /shippers
   # GET /shippers.json
+  
+
   def index
     @shippers = Shipper.all
 
@@ -14,11 +16,15 @@ class ShippersController < ApplicationController
   # GET /shippers/1.json
   def show
     @shipper = Shipper.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @shipper }
+   
+
+
     end
+  
   end
 
   # GET /shippers/new
